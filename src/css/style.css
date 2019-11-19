@@ -1,5 +1,15 @@
+@font-face {
+    font-family: multi-font;
+    src: url(./../../fonts/MuliFonts/Muli-Regular.ttf);
+}
+
+@font-face {
+    font-family: barlow-font;
+    src: url(./../../fonts/BarlowFonts/Barlow-Medium.ttf);
+}
+
 .aveva-infographic {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: multi-font;
     background-color: #3D1152;
 }
 
@@ -8,6 +18,10 @@
     color: #FFFFFF;
     padding-top: 36px;
     padding-bottom: 40.2px;
+}
+
+.aveva-infographic__heading h2 {
+    color: #FFFFFF;
 }
 
 .aveva-infographic__cloud {
@@ -34,7 +48,7 @@
 
 .aveva-infographic__cloud--content-heading {
     color: #FFFFFF;
-    width: 220px;
+    width: 200px;
     padding: 37% 0px;
     text-align: center;
     background: url(./../../assets/Path106@2x.png);
@@ -48,7 +62,8 @@
 }
 
 .aveva-infographic__flex {
-    margin: 0 10%;
+    margin-left: 10%;
+    margin-right: 10%;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -67,7 +82,7 @@
     left: 50%;
     background-size: contain;
     transform: translate(-50%, 0);
-    top: -7px;
+    top: -11px;
     bottom: 0;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -96,13 +111,13 @@
 }
 
 
-.animate-right {
+/* .animate-right {
     animation: translating-right 1s;
 }
 
 .animate-left {
     animation: translating-left 1s;
-}
+} */
 
 .aveva-infographic__flex--items-category {
     display: inline-block;
@@ -115,7 +130,11 @@
     position: relative;
 }
 
-.aveva-infographic__flex--items-category-index::before {
+.item-left .aveva-infographic__flex--items-category {
+    transform: translateX(15px);
+}
+
+.aveva-infographic__flex--items-category-index::after {
     content: ' ';
     position: absolute;
     height: 10px;
@@ -124,8 +143,23 @@
     background-color: #F70656;
 }
 
+.aveva-infographic__flex--items-category-index .infographic-number {
+    color: #FFFFFF;
+    padding-left: 25px;
+    font-size: 30px;
+}
+
 .left-5 {
     left: 5%;
+}
+
+.aveva-infographic__flex--items-category-index {
+    position: relative;
+}
+
+.aveva-infographic__flex--items-category-index p {
+    position: absolute;
+    bottom: 0;
 }
 
 .aveva-infographic__flex--items>p {
